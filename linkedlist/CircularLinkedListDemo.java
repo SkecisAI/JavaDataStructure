@@ -6,14 +6,13 @@ public class CircularLinkedListDemo {
         int kidsNum2 = 5, start2 = 1, m2 = 2;
         CircularLinkedList josephProblemCircularLinkedList = new CircularLinkedList(kidsNum1);
         josephProblemCircularLinkedList.add();
-//        josephProblemCircularLinkedList.traverse();
         josephProblemCircularLinkedList.resolveProblem(start1, m1);
     }
 }
 
 class CircularLinkedList{
-    private ChildNode first = new ChildNode(0);
-    private int length;
+    private final ChildNode first = new ChildNode(0);
+    private final int length;
 
     public CircularLinkedList(int len){
         length = len;
@@ -24,7 +23,7 @@ class CircularLinkedList{
             System.out.println("错误的开始编号!");
             return;
         }
-        System.out.println("解决中... ...");
+        System.out.println("约瑟夫环... ...");
         ChildNode startNode = first;
         ChildNode last = startNode;
         while (true){
