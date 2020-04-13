@@ -3,7 +3,7 @@ package indi.stack;
 public class CalculateExpressionDemo {
     public static void main(String[] args) {
         CalculateExpression ce = new CalculateExpression();
-        String exp = "9+6*2-3";
+        String exp = "-30+2*6-20";
         System.out.println(ce.calculating(exp));
     }
 }
@@ -16,7 +16,7 @@ class CalculateExpression{
         boolean isNumber = false;
         int start = 0;
         int i = 0;
-       while (true){
+        while (true){
             char c = exp.charAt(i);
             if ('0' <= c && c <= '9'){
                 if (!isNumber){
@@ -24,6 +24,12 @@ class CalculateExpression{
                 }
                 isNumber = true;
             }else {
+                if (i==0){
+                    digitStack.push("0");
+                    symbolStack.push(exp.substring(i, i+1));
+                    i++;
+                    continue;
+                }
                 isNumber = false;
                 digitStack.push(exp.substring(start, i));
                 symbolStack.push(exp.substring(i, i+1));
@@ -180,7 +186,7 @@ class SymbolStack extends Stack{
             super.push(s);
             return;
         }
-        if (!CalculateExpression.greater(s, super.peek())) {
+        if (!CalculateExpression.greater(s, super.peek())) {  // 优先级小于或等于之前的运算符
             String op = super.pop();
             CalculateExpression.operating(op);
         }
