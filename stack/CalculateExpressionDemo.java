@@ -92,12 +92,12 @@ class CalculateExpression{
     }
 }
 
-class Stack {
+class SimpleStack {
     private int top = -1;
     private final int MAX_SIZE;
     private final String[] STACK;
 
-    public Stack(int maxSize){
+    public SimpleStack(int maxSize){
         this.MAX_SIZE = maxSize;
         this.STACK = new String[this.MAX_SIZE];
     }
@@ -146,7 +146,7 @@ class Stack {
     }
 }
 
-class DigitStack extends Stack{
+class DigitStack extends SimpleStack {
 
     public DigitStack(int maxSize) {
         super(maxSize);
@@ -169,7 +169,7 @@ class DigitStack extends Stack{
     }
 }
 
-class SymbolStack extends Stack{
+class SymbolStack extends SimpleStack {
 
     public SymbolStack(int maxSize) {
         super(maxSize);
