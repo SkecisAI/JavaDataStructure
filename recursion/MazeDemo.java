@@ -2,12 +2,12 @@ package indi.recursion;
 
 public class MazeDemo {
     public static void main(String[] args) {
-        Maze myMaze = new Maze(8, 8);
+        Maze myMaze = new Maze(4, 7);
         myMaze.printMaze();
         if (myMaze.findRoad(1, 1)){
             myMaze.printRoad();
         }else {
-            System.out.println("没有找到出路!");
+            System.out.println("没有找到路线!");
         }
     }
 }
@@ -46,9 +46,13 @@ class Maze{
 
     public void printMaze(){
         System.out.println("迷宫地图：");
-        for (int[] row : maze) {
+        for (int i = 0; i < maze.length; i++) {
             for (int j = 0; j < maze.length; j++) {
-                if (row[j] == 1) {
+                if (i == destinationX && j == destinationY){
+                    System.out.print("@ ");
+                    continue;
+                }
+                if (maze[i][j] == 1) {
                     System.out.print("# ");
                 } else {
                     System.out.print(". ");
@@ -59,6 +63,7 @@ class Maze{
     }
 
     // direction priority：down->right->up->left
+    // 更改策略或遍历策略可求最短路径
     public boolean findRoad(int i, int j){
         if (i == destinationX && j == destinationY && maze[i][j] != WALL){
             maze[destinationX][destinationY] = '@';
