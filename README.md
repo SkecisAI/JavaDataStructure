@@ -13,4 +13,4 @@ Java数据结构练习
   4. [逆波兰表达式求值](https://github.com/SkecisAI/JavaDataStructure/blob/master/stack/ReversePolishExpressionDemo.java)
 - 递归
   1. [迷宫](https://github.com/SkecisAI/JavaDataStructure/blob/master/recursion/MazeDemo.java)
-  2. [八皇后]()
+  2. [八皇后](https://github.com/SkecisAI/JavaDataStructure/blob/master/recursion_backtracking/EightQueensDemo.java)
