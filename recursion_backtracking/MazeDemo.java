@@ -1,4 +1,4 @@
-package indi.recursion;
+package indi.recursion_backtracking;
 
 public class MazeDemo {
     public static void main(String[] args) {
