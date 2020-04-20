@@ -14,3 +14,10 @@ Java数据结构练习
 - 递归
   1. [迷宫](https://github.com/SkecisAI/JavaDataStructure/blob/master/recursion/MazeDemo.java)
   2. [八皇后](https://github.com/SkecisAI/JavaDataStructure/blob/master/recursion_backtracking/EightQueensDemo.java)
+- 排序
+  1. [冒泡排序](https://github.com/SkecisAI/JavaDataStructure/blob/master/sorting/BubbleSortDemo.java)
+  2. [直接插入排序](https://github.com/SkecisAI/JavaDataStructure/blob/master/sorting/InsertionSortDemo.java)
+  3. [选择排序](https://github.com/SkecisAI/JavaDataStructure/blob/master/sorting/SelectionSortDemo.java)
+  4. [希尔排序](https://github.com/SkecisAI/JavaDataStructure/blob/master/sorting/ShellSortDemo.java)
+  
+## 待更...
