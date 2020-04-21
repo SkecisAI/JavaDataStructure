@@ -19,5 +19,8 @@ Java数据结构练习
   2. [直接插入排序](https://github.com/SkecisAI/JavaDataStructure/blob/master/sorting/InsertionSortDemo.java)
   3. [选择排序](https://github.com/SkecisAI/JavaDataStructure/blob/master/sorting/SelectionSortDemo.java)
   4. [希尔排序](https://github.com/SkecisAI/JavaDataStructure/blob/master/sorting/ShellSortDemo.java)
+  5. [快速排序](https://github.com/SkecisAI/JavaDataStructure/blob/master/sorting/QuickSortDemo.java)
+  6. [归并排序](https://github.com/SkecisAI/JavaDataStructure/blob/master/sorting/MergeSortDemo.java)
+  7. [基数排序](https://github.com/SkecisAI/JavaDataStructure/blob/master/sorting/RadixSortDemo.java)
   
 ## 待更...
