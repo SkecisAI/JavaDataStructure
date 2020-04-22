@@ -20,10 +20,10 @@ class BinarySearch{
         if (left > right){
             return new ArrayList<>();
         }
+        // ordinary mid
 //        int mid = (left + right) / 2;
-        // self-adaption mid
+        // interpolation mid
         int mid = (int) (left + (value - arr[left])*1.0 / (arr[right] - arr[left]) * (right - left));
-        System.out.println("hello");
         if (value < arr[mid]){
             return binarySearch(arr, value, left, mid-1);
         }else if (value > arr[mid]){
