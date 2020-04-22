@@ -5,8 +5,8 @@ import java.util.List;
 
 public class BinarySearchDemo {
     public static void main(String[] args) {
-        int[] arr = {1, 4, 6, 8, 9, 12, 15, 17, 27, 27, 27, 78, 88, 100, 100};
-        List<Integer> resultList = BinarySearch.binarySearch(arr, 27, 0, arr.length-1);
+        int[] arr = {1, 4, 6, 8, 9, 12, 15, 17, 270, 270, 270, 780, 883, 1003};
+        List<Integer> resultList = BinarySearch.binarySearch(arr, 1, 0, arr.length-1);
         if (resultList.size() <= 0){
             System.out.println("not fount");
         }else {
@@ -23,6 +23,7 @@ class BinarySearch{
 //        int mid = (left + right) / 2;
         // self-adaption mid
         int mid = (int) (left + (value - arr[left])*1.0 / (arr[right] - arr[left]) * (right - left));
+        System.out.println("hello");
         if (value < arr[mid]){
             return binarySearch(arr, value, left, mid-1);
         }else if (value > arr[mid]){
