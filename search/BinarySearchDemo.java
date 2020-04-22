@@ -20,12 +20,14 @@ class BinarySearch{
         if (left > right){
             return new ArrayList<>();
         }
-        int mid = (left + right) / 2;
+//        int mid = (left + right) / 2;
+        // self-adaption mid
+        int mid = (int) (left + (value - arr[left])*1.0 / (arr[right] - arr[left]) * (right - left));
         if (value < arr[mid]){
             return binarySearch(arr, value, left, mid-1);
         }else if (value > arr[mid]){
             return binarySearch(arr, value, mid+1, right);
-        }else {
+        }else {   // find more values
             List<Integer> resList = new ArrayList<>();
             int l = mid-1, r = mid+1;
             if (l >= 0 || r < arr.length) {
