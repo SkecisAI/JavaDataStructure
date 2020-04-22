@@ -11,6 +11,7 @@ public class HashTableDemo {
         while (true){
             System.out.println("add: 添加");
             System.out.println("list: 显示");
+            System.out.println("find: 寻找");
             System.out.println("exit: 退出");
 
             key = scanner.next();
@@ -26,6 +27,11 @@ public class HashTableDemo {
                     break;
                 case "list":
                     hashTable.reverse();
+                    break;
+                case "find":
+                    System.out.println("输入id");
+                    int seekId = scanner.nextInt();
+                    hashTable.findEmpById(seekId);
                     break;
                 case "exit":
                     scanner.close();
@@ -59,6 +65,15 @@ class HashTable{
         for (int i = 0; i < size; i++) {
             System.out.printf("第%d条链表--", i+1);
             empLinkedLists[i].reverse();
+        }
+    }
+
+    public void findEmpById(int id){
+        Employee emp = empLinkedLists[hashFunc(id)].find(id);
+        if (emp == null){
+            System.out.println("not found");
+        }else {
+            System.out.printf("在第%d条链表中\n", hashFunc(id)+1);
         }
     }
 
@@ -105,5 +120,20 @@ class EmpLinkedList {
             currEmp = currEmp.next;
         }
         System.out.println();
+    }
+
+    public Employee find(int id){
+        if (head == null){
+            System.out.println("链表为空");
+            return null;
+        }
+        Employee currEmp = head;
+        while (currEmp != null){
+            if (currEmp.id == id){
+                return currEmp;
+            }
+            currEmp = currEmp.next;
+        }
+        return null;
     }
 }
