@@ -22,5 +22,11 @@ Java数据结构练习
   5. [快速排序](https://github.com/SkecisAI/JavaDataStructure/blob/master/sorting/QuickSortDemo.java)
   6. [归并排序](https://github.com/SkecisAI/JavaDataStructure/blob/master/sorting/MergeSortDemo.java)
   7. [基数排序](https://github.com/SkecisAI/JavaDataStructure/blob/master/sorting/RadixSortDemo.java)
+- 查找
+  1. [线性查找](https://github.com/SkecisAI/JavaDataStructure/blob/master/search/SequentialSearchDemo.java)
+  2. [二分查找](https://github.com/SkecisAI/JavaDataStructure/blob/master/search/BinarySearchDemo.java#L24)
+  3. [插值查找](https://github.com/SkecisAI/JavaDataStructure/blob/master/search/BinarySearchDemo.java#L26)
+  4. [斐波那契查找](https://github.com/SkecisAI/JavaDataStructure/blob/master/search/FibonacciSearchDemo.java)
+- [哈希表](https://github.com/SkecisAI/JavaDataStructure/blob/master/hash_table/HashTableDemo.java)
   
 ## 待更...
