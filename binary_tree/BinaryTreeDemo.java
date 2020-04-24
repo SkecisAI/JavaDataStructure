@@ -18,10 +18,14 @@ public class BinaryTreeDemo {
         treeNode3.setLeft(treeNode5);
 
         binaryTree.setRoot(root);
-//        binaryTree.preOrder();
+        System.out.println("before deleting");
+        binaryTree.preOrder();
+        binaryTree.preOrderDelete(2);
+        System.out.println("after deleting");
+        binaryTree.preOrder();
 //        binaryTree.infixOrder();
 //        binaryTree.postOrder();
-        System.out.println(binaryTree.preOrderSearch(2));
+//        System.out.println(binaryTree.preOrderSearch(2));
 
     }
 }
@@ -35,6 +39,10 @@ class TreeNode{
     public TreeNode(int id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public void setLeft(TreeNode left) {
@@ -100,6 +108,23 @@ class TreeNode{
         }
         return null;
     }
+
+    public void preOrderDelete(int id){
+        if (this.left != null && this.left.id == id){
+            this.left = null;
+            return;
+        }
+        if (this.right != null && this.right.id == id){
+            this.right = null;
+            return;
+        }
+        if (this.left != null){
+            this.left.preOrderDelete(id);
+        }
+        if (this.right != null){
+            this.right.preOrderDelete(id);
+        }
+    }
 }
 
 class BinaryTree{
@@ -121,6 +146,18 @@ class BinaryTree{
             return this.root.preOrderSearch(id);
         }else {
             return null;
+        }
+    }
+
+    public void preOrderDelete(int id){
+        if (this.root != null){
+            if (this.root.getId() == id){
+                this.root = null;
+                return;
+            }
+            this.root.preOrderDelete(id);
+        }else {
+            System.out.println("树空，不能删除");
         }
     }
 
