@@ -16,6 +16,8 @@ public class ThreadedBinaryTreeDemo {
 
         ThreadedBinaryTree threadedBinaryTree = new ThreadedBinaryTree(rootNode);
         threadedBinaryTree.infixThreadedNode();
+        // pre:   1, (3, 8, 10,) (6, 14)
+        // infix: (8, (3), 10,) 1, (14, (6))
         // test:
         System.out.println("前驱结点："+threadNode4.getLeft().toString());
         System.out.println("后继结点："+threadNode4.getRight().toString());
