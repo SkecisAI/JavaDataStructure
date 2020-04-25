@@ -28,5 +28,9 @@ Java数据结构练习
   3. [插值查找](https://github.com/SkecisAI/JavaDataStructure/blob/master/search/BinarySearchDemo.java#L26)
   4. [斐波那契查找](https://github.com/SkecisAI/JavaDataStructure/blob/master/search/FibonacciSearchDemo.java)
 - [哈希表](https://github.com/SkecisAI/JavaDataStructure/blob/master/hash_table/HashTableDemo.java)
+- [二叉树](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/BinaryTreeDemo.java)
+  1. [三种遍历](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/BinaryTreeDemo.java#L64)
+  2. [顺序存储：满二叉树](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/SeqBinaryTreeDemo.java)
+  3. [中序线索化二叉树](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/ThreadedBinaryTreeDemo.java)
   
 ## 待更...
