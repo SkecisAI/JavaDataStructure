@@ -11,7 +11,7 @@ Java数据结构练习
   2. [简单表达式求值](https://github.com/SkecisAI/JavaDataStructure/blob/master/stack/CalculateExpressionDemo.java)
   3. [表达式中缀转后缀](https://github.com/SkecisAI/JavaDataStructure/blob/master/stack/InfixToPostfixDemo.java)
   4. [逆波兰表达式求值](https://github.com/SkecisAI/JavaDataStructure/blob/master/stack/ReversePolishExpressionDemo.java)
-- 递归
+- 递归与回溯
   1. [迷宫](https://github.com/SkecisAI/JavaDataStructure/blob/master/recursion/MazeDemo.java)
   2. [八皇后](https://github.com/SkecisAI/JavaDataStructure/blob/master/recursion_backtracking/EightQueensDemo.java)
 - 排序
