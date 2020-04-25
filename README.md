@@ -11,7 +11,7 @@ Java数据结构练习
   2. [简单表达式求值](https://github.com/SkecisAI/JavaDataStructure/blob/master/stack/CalculateExpressionDemo.java)
   3. [表达式中缀转后缀](https://github.com/SkecisAI/JavaDataStructure/blob/master/stack/InfixToPostfixDemo.java)
   4. [逆波兰表达式求值](https://github.com/SkecisAI/JavaDataStructure/blob/master/stack/ReversePolishExpressionDemo.java)
-- 递归
+- 递归与回溯
   1. [迷宫](https://github.com/SkecisAI/JavaDataStructure/blob/master/recursion/MazeDemo.java)
   2. [八皇后](https://github.com/SkecisAI/JavaDataStructure/blob/master/recursion_backtracking/EightQueensDemo.java)
 - 排序
@@ -28,5 +28,9 @@ Java数据结构练习
   3. [插值查找](https://github.com/SkecisAI/JavaDataStructure/blob/master/search/BinarySearchDemo.java#L26)
   4. [斐波那契查找](https://github.com/SkecisAI/JavaDataStructure/blob/master/search/FibonacciSearchDemo.java)
 - [哈希表](https://github.com/SkecisAI/JavaDataStructure/blob/master/hash_table/HashTableDemo.java)
+- [二叉树](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/BinaryTreeDemo.java)
+  1. [三种遍历](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/BinaryTreeDemo.java#L64)
+  2. [顺序存储：满二叉树](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/SeqBinaryTreeDemo.java)
+  3. [中序线索化二叉树](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/ThreadedBinaryTreeDemo.java)
   
 ## 待更...
