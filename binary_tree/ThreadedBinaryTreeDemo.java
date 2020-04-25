@@ -15,12 +15,13 @@ public class ThreadedBinaryTreeDemo {
         threadNode5.setLeft(threadNode6);
 
         ThreadedBinaryTree threadedBinaryTree = new ThreadedBinaryTree(rootNode);
-        threadedBinaryTree.infixThreadedNode();
+        threadedBinaryTree.infixThreadedTree();
         // pre:   1, (3, 8, 10,) (6, 14)
         // infix: (8, (3), 10,) 1, (14, (6))
         // test:
-        System.out.println("前驱结点："+threadNode4.getLeft().toString());
-        System.out.println("后继结点："+threadNode4.getRight().toString());
+//        System.out.println("前驱结点："+threadNode4.getLeftTag().toString());
+//        System.out.println("后继结点："+threadNode4.getRightTag().toString());
+        threadedBinaryTree.infixThreadedInverse();
     }
 }
 
@@ -32,15 +33,30 @@ class ThreadedBinaryTree{
         this.root = root;
     }
 
-    public void infixThreadedNode(){
-        infixThreadedNode(this.root);
+    public void infixThreadedInverse(){
+        ThreadNode threadNode = root;
+        while (threadNode != null){
+            while (threadNode.getLeftTag()==Tag.LeftChild){
+                threadNode = threadNode.getLeft();
+            }
+            System.out.println(threadNode.toString());
+            while (threadNode.getRightTag()==Tag.Subsequent){
+                threadNode = threadNode.getRight();
+                System.out.println(threadNode.toString());
+            }
+            threadNode = threadNode.getRight();
+        }
     }
 
-    public void infixThreadedNode(ThreadNode node){
+    public void infixThreadedTree(){
+        infixThreadedTree(this.root);
+    }
+
+    public void infixThreadedTree(ThreadNode node){
         if (node == null){
             return;
         }
-        infixThreadedNode(node.getLeft());
+        infixThreadedTree(node.getLeft());
 
         if (node.getLeft()==null){
             node.setLeft(pre);
@@ -52,16 +68,16 @@ class ThreadedBinaryTree{
         }
         pre = node;
 
-        infixThreadedNode(node.getRight());
+        infixThreadedTree(node.getRight());
 
     }
 
-//    public void infixOrder(){
-//        System.out.println("中序遍历");
-//        if (this.root!=null){
-//            this.root.infixOrder();
-//        }
-//    }
+    public void infixOrder(){
+        System.out.println("中序遍历");
+        if (this.root!=null){
+            this.root.infixOrder();
+        }
+    }
 }
 
 class ThreadNode{
@@ -101,17 +117,17 @@ class ThreadNode{
         this.leftTag = leftTag;
     }
 
-//    public Tag getLeftTag() {
-//        return leftTag;
-//    }
+    public Tag getLeftTag() {
+        return leftTag;
+    }
 
     public void setRightTag(Tag rightTag) {
         this.rightTag = rightTag;
     }
 
-//    public Tag getRightTag() {
-//        return rightTag;
-//    }
+    public Tag getRightTag() {
+        return rightTag;
+    }
 
     @Override
     public String toString() {
@@ -122,15 +138,15 @@ class ThreadNode{
                 '}';
     }
 
-//    public void infixOrder(){
-//        if (this.left != null){
-//            this.left.infixOrder();
-//        }
-//        System.out.println(this);
-//        if (this.right != null){
-//            this.right.infixOrder();
-//        }
-//    }
+    public void infixOrder(){
+        if (this.left != null){
+            this.left.infixOrder();
+        }
+        System.out.println(this);
+        if (this.right != null){
+            this.right.infixOrder();
+        }
+    }
 }
 
 enum Tag{
