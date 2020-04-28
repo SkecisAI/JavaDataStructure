@@ -30,7 +30,8 @@ Java数据结构练习
 - [哈希表](https://github.com/SkecisAI/JavaDataStructure/blob/master/hash_table/HashTableDemo.java)
 - [二叉树](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/BinaryTreeDemo.java)
   1. [三种遍历(递归式)](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/BinaryTreeDemo.java#L64)
-  2. [顺序存储：满二叉树](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/SeqBinaryTreeDemo.java)
+  2. [顺序存储：完全二叉树](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/SeqBinaryTreeDemo.java)
   3. [中序线索化二叉树](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/ThreadedBinaryTreeDemo.java)
+  4. [堆排序(完全二叉树)](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/HeapSortDemo.java)
   
 ## 待更...
