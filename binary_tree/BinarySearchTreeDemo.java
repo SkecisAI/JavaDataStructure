@@ -56,7 +56,7 @@ class BinarySearchTree{
             if (parent != null) {
                 bstNode.deleteSelf(parent);   // 删除的不是根节点
             }else {
-                root = bstNode.deleteSelf();  // 删除的是根节点
+                root = bstNode.deleteRoot();  // 删除的是根节点
             }
         }
         else if (value < bstNode.value){
@@ -144,13 +144,20 @@ class Node{
         }
     }
 
-    public Node deleteSelf(){
-        Node root = this.left;    // 更新根节点
-        Node tmp = this.left;
-        while (tmp.right != null) {
-            tmp = tmp.right;
+    public Node deleteRoot(){
+        Node root;
+        if (this.right == null && this.left == null){
+            root = null;
+        }else if (this.right == null || this.left == null){
+            root = (this.left == null) ? this.right : this.left;
+        }else {
+            root = this.left;    // 更新根节点
+            Node tmp = this.left;
+            while (tmp.right != null) {
+                tmp = tmp.right;
+            }
+            tmp.right = this.right;    // 重接右子树
         }
-        tmp.right = this.right;    // 重接右子树
         return root;
     }
 }
