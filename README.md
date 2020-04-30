@@ -37,5 +37,8 @@ Java数据结构练习
   6. [赫夫曼编码](https://github.com/SkecisAI/JavaDataStructure/blob/master/huffman_tree/HuffmanCodeDemo.java)
   7. [二叉查找树BST](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/BinarySearchTreeDemo.java)
      - [删除节点](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/BinarySearchTreeDemo.java#L50)
+  8. [二叉平衡树(AVL树)](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/AVLTreeDemo.java)
+     - [左旋](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/AVLTreeDemo.java#L85)
+     - [右旋](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/AVLTreeDemo.java#L92)
   
 ## 待更...
