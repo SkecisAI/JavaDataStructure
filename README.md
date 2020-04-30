@@ -33,5 +33,9 @@ Java数据结构练习
   2. [顺序存储：完全二叉树](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/SeqBinaryTreeDemo.java)
   3. [中序线索化二叉树](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/ThreadedBinaryTreeDemo.java)
   4. [堆排序(完全二叉树)](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/HeapSortDemo.java)
+  5. [赫夫曼树](https://github.com/SkecisAI/JavaDataStructure/blob/master/huffman_tree/HuffmanTreeDemo.java)
+  6. [赫夫曼编码](https://github.com/SkecisAI/JavaDataStructure/blob/master/huffman_tree/HuffmanCodeDemo.java)
+  7. [二叉查找树BST](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/BinarySearchTreeDemo.java)
+     - [删除节点](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/BinarySearchTreeDemo.java#L50)
   
 ## 待更...
