@@ -6,20 +6,24 @@ import java.util.Queue;
 
 public class GraphDemo {
     public static void main(String[] args) {
-        int n = 5;
-        String[] vertexName = {"A", "B", "C", "D", "E"};
+        int n = 8;
+        String[] vertexName = {"1", "2", "3", "4", "5", "6", "7", "8"};
         Graph graph = new Graph(n);
         for (String v: vertexName){
             graph.insertVertex(v);
         }
-        // B-C, A-C, A-B, B-E, B-D
-        graph.insertEdge(1, 2, 1);
-        graph.insertEdge(0, 2, 1);
         graph.insertEdge(0, 1, 1);
-        graph.insertEdge(1, 4, 1);
+        graph.insertEdge(0, 2, 1);
         graph.insertEdge(1, 3, 1);
+        graph.insertEdge(1, 4, 1);
+        graph.insertEdge(3, 7, 1);
+        graph.insertEdge(4, 7, 1);
+        graph.insertEdge(2, 5, 1);
+        graph.insertEdge(2, 6, 1);
+        graph.insertEdge(5, 6, 1);
         graph.showGraph();
-//        graph.dfs();
+        graph.dfs();
+        System.out.println();
         graph.bfs();
     }
 }
@@ -34,7 +38,6 @@ class Graph{
         edges = new int[n][n];
         vertexList = new ArrayList<>(n);
         numOfEdges = 0;
-        isVisited = new boolean[n];
     }
 
     public int getNumOfVertex(){
@@ -81,8 +84,8 @@ class Graph{
         return -1;
     }
 
-    public int getNextAdjVex(int vertex){
-        for (int i = vertex+1; i < vertexList.size(); i++) {
+    public int getNextAdjVex(int vertex, int ind){
+        for (int i = ind+1; i < vertexList.size(); i++) {
             if (edges[vertex][i] != 0){
                 return i;
             }
@@ -91,6 +94,7 @@ class Graph{
     }
 
     public void dfs(){
+        isVisited = new boolean[vertexList.size()];
         for(int v = 0; v < vertexList.size(); v++){
             if (!isVisited[v]){
                 dfs(v);
@@ -101,7 +105,7 @@ class Graph{
     public void dfs(int vertex){
         System.out.print(getName(vertex)+"-->");
         isVisited[vertex] = true;
-        for (int w = getFirstAdjVex(vertex); w != -1; w = getNextAdjVex(w)){
+        for (int w = getFirstAdjVex(vertex); w != -1; w = getNextAdjVex(vertex, w)){
             if (!isVisited[w]){
                 dfs(w);
             }
@@ -109,6 +113,7 @@ class Graph{
     }
 
     public void bfs(){
+        isVisited = new boolean[vertexList.size()];
         Queue<Integer> vexQueue = new LinkedList<>();
         for (int v = 0; v < vertexList.size(); v++){
             if (!isVisited[v]){
@@ -117,7 +122,7 @@ class Graph{
                 vexQueue.offer(v);
                 while (!vexQueue.isEmpty()){
                     Integer u = vexQueue.poll();
-                    for (int w = getFirstAdjVex(u); w != -1; w = getNextAdjVex(w)){
+                    for (int w = getFirstAdjVex(u); w != -1; w = getNextAdjVex(u, w)){
                         if (!isVisited[w]){
                             System.out.print(getName(w)+"-->");
                             isVisited[w] = true;
