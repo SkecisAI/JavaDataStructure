@@ -40,5 +40,9 @@ Java数据结构练习
   8. [二叉平衡树(AVL树)](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/AVLTreeDemo.java)
      - [左旋](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/AVLTreeDemo.java#L85)
      - [右旋](https://github.com/SkecisAI/JavaDataStructure/blob/master/binary_tree/AVLTreeDemo.java#L92)
+  9. 图
+     - [邻接矩阵](https://github.com/SkecisAI/JavaDataStructure/blob/master/graph/GraphDemo.java)
+     - [DFS](https://github.com/SkecisAI/JavaDataStructure/blob/master/graph/GraphDemo.java#L93)
+     - [BFS](https://github.com/SkecisAI/JavaDataStructure/blob/master/graph/GraphDemo.java#L111)
   
 ## 待更...
